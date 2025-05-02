@@ -7,13 +7,22 @@
                 <div class="view-all">View</div>
             </div>
             <div class="movies-thumbnail">
-                <div class="movie">
+                <div class="movie" *ngFor="let movie of trendingMovies">
                     <div class="cover">
-                        <img src="" alt="">
+                        <img [src]="movie.cover" alt="">
                     </div>
                     <div class="details">
-                        <div class="name"></div>
-                        <div class="rating"></div>
+                        <div class="name">{{movie.name}}</div>
+                        <div class="rating">
+                            <ng-template #t let-fill="fill">
+                                <span class="star" [class.full]="fill === 100">
+                                    <span class="half" [style.width.%]="fill">&hearts;</span>
+                                </span>&hearts;
+                            </ng-template>
+                            <ngb-rating>
+                                [(rate)]="movie.rating" [starTemplate]="t" [readonly]="true" [max]="5"
+                            </ngb-rating>
+                        </div>
                     </div>
                 </div>
             </div>
