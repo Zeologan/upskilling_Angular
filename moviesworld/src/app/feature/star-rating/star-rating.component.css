@@ -1,0 +1,23 @@
+.star {
+    position: relative;
+    display: inline-block;
+    font-size: 1.3rem;
+    width: 1.3rem;
+  }
+  
+  .half {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    height: 100%;
+    white-space: nowrap;
+  }
+  
+  .fa-star, .fa-star-o {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ff902b;
+  }
+  

@@ -1,0 +1,16 @@
+<ng-template #t let-fill="fill">
+    <span class="star">
+      <span class="half" [style.width.%]="fill">
+        <i class="fa fa-star text-warning"></i>
+      </span>
+      <i class="fa fa-star-o text-warning"></i>
+    </span>
+  </ng-template>
+  
+  <ngb-rating
+    [rate]="rating"
+    [readonly]="isReadOnly"
+    [starTemplate]="t"
+    [max]="5">
+  </ngb-rating>
+  
