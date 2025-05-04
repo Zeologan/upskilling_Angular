@@ -6,7 +6,9 @@
     min-height: calc(100vh-80px);
     border-right: 1px solid #fdc827;
     padding: 20px 40px;
-
+    .trending-movies{
+      overflow: hidden;
+    }
     .top {
       display: flex;
       align-items: center;
@@ -28,6 +30,7 @@
     .movies-thumbnail {
       display: flex;
       justify-content: space-between;
+      gap: 10px;
 
       .movie {
         .cover {
