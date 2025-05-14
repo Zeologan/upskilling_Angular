@@ -6,7 +6,7 @@
     min-height: calc(100vh-80px);
     border-right: 1px solid #fdc827;
     padding: 20px 40px;
-    .trending-movies{
+    .trending-movies, .theatre-movies,.popular-movies{
       overflow: hidden;
     }
     .top {
@@ -29,7 +29,7 @@
 
     .movies-thumbnail {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-between; 
       gap: 10px;
 
       .movie {
@@ -60,5 +60,15 @@
   }
 }
 
+.rating {
+  padding-right: 45px;
+  position: relative;
+  .rating-value{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    font-weight: bold;
+  }
+}
 
 

@@ -8,8 +8,13 @@ import { HttpClient } from '@angular/common/http';
 export class HomeComponent implements OnInit {
   constructor(private http: HttpClient) { }
   trendingMovies: any;
+  theatreMovies:any;
+  popularMovies:any;
+
   ngOnInit(): void {
     this.getTrendingMovies();
+    this.getTheatreMovies();
+    this.getPopularMovies();
   }
 
   getTrendingMovies() {
@@ -19,4 +24,17 @@ export class HomeComponent implements OnInit {
     })
   }
 
+  getTheatreMovies() {
+    this.http.get('http://localhost:4200/assets/data/theatre-movies.json').subscribe((movies) => {
+      this.theatreMovies = movies;
+      console.log(this.theatreMovies)
+    })
+  }
+
+  getPopularMovies() {
+    this.http.get('http://localhost:4200/assets/data/popular-movies.json').subscribe((movies) => {
+      this.popularMovies = movies;
+      console.log(this.popularMovies)
+    })
+  }
 }
