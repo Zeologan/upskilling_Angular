@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: 'login', component:LoginComponent},
   {path: 'home', component:HomeComponent},
   {path: 'header', component:HeaderComponent},
-  {path: 'movie', component:MovieComponent},
+  {path: 'movie/:type/:id', component:MovieComponent},
   {path: '**', component:LoginComponent}
 ];
 
