@@ -1,6 +1,7 @@
 <app-header></app-header>
 <div class="home-container">
     <div class="all-movies">
+        <!-- trending-movie  -->
         <div class="trending-movies">
             <div class="top">
                 <h4>Trending Movies</h4>
@@ -21,6 +22,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- theatre-movie  -->
         <div class="theatre-movies">
             <div class="top">
                 <h4>Popular in Theatre</h4>
@@ -42,16 +45,17 @@
             </div>
         </div>
     </div>
+    <!-- popular section  -->
     <div class="popular-movies">
         <h4>All Time Popular</h4>
         <div class="movies">
             <div class="movie" *ngFor="let movie of popularMovies">
                 <div class="name" (click)="goToMovie('popular', movie.id)">{{movie.name}}</div>
-                    <div class="rating">
-                        <span class="rating-value">{{movie.rating}}</span>
-                        <app-star-rating [rating]="movie.rating" [isReadOnly]="true"></app-star-rating>
-                    </div>
+                <div class="rating">
+                    <span class="rating-value">{{movie.rating}}</span>
+                    <app-star-rating [rating]="movie.rating" [isReadOnly]="true"></app-star-rating>
                 </div>
+            </div>
         </div>
     </div>
 </div>
