@@ -34,7 +34,6 @@ export class AppComponent {
 
   deleteTask(id:number):void{
     this.todoList = this.todoList.filter(item => item.id !== id);
-    console.log(this.todoList);
   }
 }
 
